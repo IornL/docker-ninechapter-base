@@ -1,7 +1,7 @@
 FROM andyfangdz/alpine-glibc-python
 ENV PYTHONUNBUFFERED 1
 ENV ISDOCKERDEV True
-RUN apk add --no-cache postgresql-dev build-base python-dev
+RUN apk add --no-cache postgresql-dev build-base python-dev libcurl
 RUN apk add --no-cache bash git nginx uwsgi uwsgi-python py-pip linux-headers \
   && pip install --upgrade pip \
   && pip install flask
